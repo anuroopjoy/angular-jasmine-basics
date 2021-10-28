@@ -1,0 +1,21 @@
+<form class="form-inline">
+  <label for="email">User Name:</label>
+  <input
+    type="username"
+    id="username"
+    placeholder="Enter User Name"
+    name="username"
+    [(ngModel)]="username"
+  />
+  <label for="pwd">Password:</label>
+  <input
+    type="password"
+    id="pwd"
+    placeholder="Enter password"
+    name="pswd"
+    [(ngModel)]="password"
+  />
+  <button type="submit" (click)="login()">Submit</button>
+</form>
+
+<p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>

@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let city of cities">
+    <p>{{ city.name | capitalize }}</p>
+    <img src="assets/{{ city.image }}" [alt]="city.alt" />
+  </li>
+</ul>
