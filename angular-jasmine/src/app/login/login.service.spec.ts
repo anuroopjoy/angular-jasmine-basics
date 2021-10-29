@@ -35,9 +35,7 @@ describe('Login Service', () => {
       password: 'admin',
     };
 
-    // Make an HTTP GET request
     httpClient.post('login', inputData).subscribe((data) =>
-      // When observable resolves, result should match test data
       expect(data).toEqual(testData)
     );
 
@@ -55,7 +53,6 @@ describe('Login Service', () => {
       password: 'admin',
     };
 
-    // Make an HTTP GET request
     httpClient.post('login', inputData).subscribe(
       () => fail('should have failed with the 404 error'),
       (error: HttpErrorResponse) => {
