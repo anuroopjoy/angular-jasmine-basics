@@ -20,7 +20,7 @@ class LoginComponent {}
   template: 'Home Component',
 })
 class HomeComponent {}
-fdescribe('App Component', () => {
+describe('App Component', () => {
   let fixture: ComponentFixture<AppComponent>;
   let appComponent: AppComponent;
   beforeEach(() => {
