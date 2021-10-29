@@ -3,7 +3,7 @@ import { fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { defer } from 'rxjs';
 import { HomeService } from './home.service';
 
-describe('Login Service', () => {
+describe('Home Service', () => {
   let homeService: HomeService;
   let httpClientSpy: { get: jasmine.Spy };
   httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);

@@ -35,9 +35,9 @@ describe('Login Service', () => {
       password: 'admin',
     };
 
-    httpClient.post('login', inputData).subscribe((data) =>
-      expect(data).toEqual(testData)
-    );
+    loginService
+      .login(inputData)
+      .then((data) => expect(data).toEqual(testData));
 
     const req = httpController.expectOne('login');
 
@@ -53,7 +53,7 @@ describe('Login Service', () => {
       password: 'admin',
     };
 
-    httpClient.post('login', inputData).subscribe(
+    loginService.login(inputData).then(
       () => fail('should have failed with the 404 error'),
       (error: HttpErrorResponse) => {
         expect(error.status).toEqual(500, 'status');
