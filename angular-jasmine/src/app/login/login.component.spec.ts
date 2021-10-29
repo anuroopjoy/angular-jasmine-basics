@@ -31,7 +31,7 @@ class Page {
   constructor(private fixture: ComponentFixture<LoginComponent>) {}
 
   public updateValue(input: HTMLInputElement, value: string) {
-    input.value = 'admin';
+    input.value = value;
     input.dispatchEvent(new Event('input'));
   }
 }
