@@ -5,6 +5,7 @@ import { HomeService } from './home.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  providers: [HomeService],
 })
 export class HomeComponent implements OnInit {
   cities: { name: string; image: string; alt: string }[] = [];
