@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CapitalizePipe } from './shared/capitalize.pipe';
+import { HighlightDirective } from './shared/highlight.directive';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -15,7 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [LoginComponent, HomeComponent, CapitalizePipe],
+  declarations: [LoginComponent, HomeComponent, CapitalizePipe, HighlightDirective],
   imports: [
     RouterModule.forRoot(routes, { useHash: true }),
     FormsModule,
