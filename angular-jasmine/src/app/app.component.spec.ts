@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
 })
 class LoginComponent {}
 @Component({
-  selector: 'login',
+  selector: 'home',
   template: 'Home Component',
 })
 class HomeComponent {}
