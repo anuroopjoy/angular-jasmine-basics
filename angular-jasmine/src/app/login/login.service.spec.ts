@@ -56,8 +56,8 @@ describe('Login Service', () => {
     loginService.login(inputData).then(
       () => fail('should have failed with the 500 error'),
       (error: HttpErrorResponse) => {
-        expect(error.status).toEqual(500, 'status');
-        expect(error.error).toEqual(emsg, 'message');
+        expect(error.status).withContext('error status').toEqual(500);
+        expect(error.error).withContext('error message').toEqual(emsg);
       }
     );
 
