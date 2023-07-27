@@ -117,7 +117,7 @@ describe('Login Component', () => {
     page.updateValue(page.usernameInput, 'admin');
     page.updateValue(page.passwordInput, 'admin');
     (loginService.login as jasmine.Spy).and.rejectWith(
-      throwError('Login failed')
+      throwError(() => new Error('Login failed'))
     );
     page.submitButton.click();
     tick();
